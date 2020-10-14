@@ -242,7 +242,7 @@ html {
 .about__image {
   width: 420px;
   height: 408px;
-  background-image: url(../../assets/images/about-pets.png);
+  background-image: url(/assets/images/about-pets.png);
   background-position: center;
   background-repeat: no-repeat;
   margin-top: 0px;
@@ -491,7 +491,7 @@ html {
 }
 
 .slider-previous {
-  background-image: url(../../assets/icons/Arrow.png);
+  background-image: url(/assets/icons/Arrow.png);
   background-repeat: no-repeat;
   background-position: center;
   -webkit-transform: scaleX(-1);
@@ -501,7 +501,7 @@ html {
 }
 
 .slider-next {
-  background-image: url(../../assets/icons/Arrow.png);
+  background-image: url(/assets/icons/Arrow.png);
   background-repeat: no-repeat;
   background-position: center;
   right: 0;
@@ -734,7 +734,7 @@ html {
 .icon-card {
   width: 30px;
   height: 23px;
-  background: url(../../assets/icons/credit-card.svg);
+  background: url(/assets/icons/credit-card.svg);
   background-size: 30px 23px;
 }
 
@@ -811,7 +811,7 @@ html {
 }
 
 .footer__contact_email::before {
-  content: url(../../assets/icons/mail.png);
+  content: url(/assets/icons/mail.png);
   margin-right: 20px;
 }
 
@@ -830,7 +830,7 @@ html {
 }
 
 .footer__contact_tel::before {
-  content: url(../../assets/icons/phone.png);
+  content: url(/assets/icons/phone.png);
   margin-right: 20px;
 }
 
@@ -872,7 +872,7 @@ html {
 }
 
 .footer__location_boston::before, .footer__location_london::before {
-  content: url(../../assets/icons/pin.png);
+  content: url(/assets/icons/pin.png);
   margin-right: 20px;
 }
 
@@ -1259,7 +1259,7 @@ html {
             align-items: center;
   }
   .footer__contact_email::before {
-    content: url(../../assets/icons/mail.png);
+    content: url(/assets/icons/mail.png);
     margin-right: 20px;
     margin-top: 5px;
   }
