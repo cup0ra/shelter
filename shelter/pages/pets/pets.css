@@ -416,7 +416,7 @@
 }
 
 .footer__contact_email::before {
-  content: url(/assets/icons/mail.png);
+  content: url(../../assets/icons/mail.png);
   margin-right: 20px;
 }
 
@@ -435,7 +435,7 @@
 }
 
 .footer__contact_tel::before {
-  content: url(/assets/icons/phone.png);
+  content: url(../../assets/icons/phone.png);
   margin-right: 20px;
 }
 
@@ -457,7 +457,7 @@
 
 .footer__location_boston::before,
 .footer__location_london::before {
-  content: url(/assets/icons/pin.png);
+  content: url(../../assets/icons/pin.png);
   margin-right: 20px;
 }
 
@@ -641,7 +641,7 @@
             align-items: center;
   }
   .footer__contact_email::before {
-    content: url(/assets/icons/mail.png);
+    content: url(../../assets/icons/mail.png);
     margin-right: 20px;
     margin-top: 5px;
   }
