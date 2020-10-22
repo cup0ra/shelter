@@ -6,6 +6,7 @@
     <link href="./main.css" rel="stylesheet">
     <link href="./normalize.css" rel="stylesheet">
     <title>Shelter</title>
+    <script type = "module" src="../../pages/main/main.js"></script>
 </head>
 <body>
     <header class="header">
@@ -20,17 +21,18 @@
                 <ul class="header__menu__list">
                     <li class="header__menu__item"><a class="header__menu__link header__menu__link_active" href="../main/main.html">About the shelter</a></li>
                     <li class="header__menu__item"><a class="header__menu__link" href="../pets/pets.html">Our pets</a></li>
-                    <li class="header__menu__item"><a class="header__menu__link">Help the shelter</a></li>
-                    <li class="header__menu__item"><a class="header__menu__link">Contacts</a></li>
+                    <li class="header__menu__item"><a class="header__menu__link disabled" >Help the shelter</a></li>
+                    <li class="header__menu__item"><a class="header__menu__link disabled" >Contacts</a></li>
                 </ul>
             </nav>
-            <div class="burger-menu">
+            <div class="burger-menu" id="burger-menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
         </div>
     </header>
+    
     <main>
         <section class="not-only">
             <div class="not-only__wrapper">
@@ -61,26 +63,11 @@
                     are looking for a house</h3>
                 <div class="pets-slider">
                     <div class="pets-slider__wrapper">
-                        <div class="pets-slider__item">
-                            <img class="pets-slider__item_photo" src="../../assets/images/pets-katrine.png" alt="pets-katrine">
-                            <p class="pets-slider__item_name">Katrine</p>
-                            <button class="pets-slider__item_button">Learn more</button>
-                        </div>
-                        <div class="pets-slider__item">
-                            <img class="pets-slider__item_photo" src="../../assets/images/pets-jennifer.png" alt="pets-jennifer">
-                            <p class="pets-slider__item_name">Jennifer</p>
-                            <button class="pets-slider__item_button">Learn more</button>
-                        </div>
-                        <div class="pets-slider__item">
-                            <img class="pets-slider__item_photo" src="../../assets/images/pets-woody.png" alt="pets-woody">
-                            <p class="pets-slider__item_name">Woody</p>
-                            <button class="pets-slider__item_button">Learn more</button>
-                        </div>
                     </div>
-                    <div class="pets-slider__nav">
-                        <button type="button" class="slider-previous"></button>
-                        <button type="button" class="slider-next"></button>
-                    </div>
+                </div>
+                <div class="pets-slider__nav">
+                    <button type="button" class="slider-previous"></button>
+                    <button type="button" class="slider-next"></button>
                 </div>
               <button type="button" class="pets__button">Get to know the rest</button>
             </div>
@@ -163,5 +150,9 @@
         <img class="footer__image" src="../../assets/images/footer-puppy.png" alt="footer-puppy">
     </div>
     </footer>
+    <div id="blackout-menu" class="hidden"></div>
+    <div id="blackout-popup" class="hidden-popup">
+        <div class="closed">✖</div>
+    </div>
 </body>
 </html>

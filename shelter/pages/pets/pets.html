@@ -6,6 +6,7 @@
     <title>Document</title>
     <link href="./pets.css" rel="stylesheet">
     <link href="./normalize.css" rel="stylesheet">
+    <script type = "module" src="../../pages/pets/pets.js"></script>
 </head>
 <body>
     <header class="header">
@@ -20,16 +21,17 @@
                 <ul class="header__menu__list">
                     <li class="header__menu__item"><a class="header__menu__link" href="../main/main.html">About the shelter</a></li>
                     <li class="header__menu__item"><a class="header__menu__link header__menu__link_active"  href="../pets/pets.html">Our pets</a></li>
-                    <li class="header__menu__item"><a class="header__menu__link">Help the shelter</a></li>
-                    <li class="header__menu__item"><a class="header__menu__link">Contacts</a></li>
+                    <li class="header__menu__item"><a class="header__menu__link disabled">Help the shelter</a></li>
+                    <li class="header__menu__item"><a class="header__menu__link disabled" >Contacts</a></li>
                 </ul>
             </nav>
-            <div class="burger-menu">
+            <div class="burger-menu" id="burger-menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
         </div>
+        <div id="blackout-menu" class="hidden"></div>
     </header>
     <main>
         <section class="pets">
@@ -38,56 +40,15 @@
                     are looking for a house</h3>
                 <div class="pets-slider">
                     <div class="pets-slider__wrapper">
-                        <div class="pets-slider__item">
-                            <img class="pets-slider__item_photo" src="../../assets/images/pets-katrine.png" alt="pets-katrine">
-                            <p class="pets-slider__item_name">Katrine</p>
-                            <button class="pets-slider__item_button">Learn more</button>
-                        </div>
-                        <div class="pets-slider__item">
-                            <img class="pets-slider__item_photo" src="../../assets/images/pets-jennifer.png" alt="pets-jennifer">
-                            <p class="pets-slider__item_name">Jennifer</p>
-                            <button class="pets-slider__item_button">Learn more</button>
-                        </div>
-                        <div class="pets-slider__item">
-                            <img class="pets-slider__item_photo" src="../../assets/images/pets-woody.png" alt="pets-woody">
-                            <p class="pets-slider__item_name">Woody</p>
-                            <button class="pets-slider__item_button">Learn more</button>
-                        </div>
-                        <div class="pets-slider__item">
-                            <img class="pets-slider__item_photo" src="../../assets/images/pets-katrine2.png" alt="Sophia">
-                            <p class="pets-slider__item_name">Sophia</p>
-                            <button class="pets-slider__item_button">Learn more</button>
-                        </div>
-                        <div class="pets-slider__item">
-                            <img class="pets-slider__item_photo" src="../../assets/images/pets-timmy.png" alt="Timmy">
-                            <p class="pets-slider__item_name">Timmy</p>
-                            <button class="pets-slider__item_button">Learn more</button>
-                        </div>
-                        <div class="pets-slider__item">
-                            <img class="pets-slider__item_photo" src="../../assets/images/pets-charly.png" alt="Charly">
-                            <p class="pets-slider__item_name">Charly</p>
-                            <button class="pets-slider__item_button">Learn more</button>
-                        </div>
-                        <div class="pets-slider__item">
-                            <img class="pets-slider__item_photo" src="../../assets/images/pets-scarlet.png" alt="Scarlett">
-                            <p class="pets-slider__item_name">Scarlett</p>
-                            <button class="pets-slider__item_button">Learn more</button>
-                        </div>
-                        <div class="pets-slider__item">
-                            <img class="pets-slider__item_photo" src="../../assets/images/pets-katrine3.png" alt="Freddie">
-                            <p class="pets-slider__item_name">Freddie</p>
-                            <button class="pets-slider__item_button">Learn more</button>
-                        </div>
-                    
                     </div>
-                    <div class="pets-slider__pagination">
-                        <button type="button" class="slider__pagination__item first" disabled>	&lt;&lt;</button>
-                        <button type="button" class="slider__pagination__item prev" disabled>	&lt;</button>
-                        <button type="button" class="slider__pagination__item number">1</button>
-                        <button type="button" class="slider__pagination__item next">&gt;</button>
-                        <button type="button" class="slider__pagination__item last">&gt;&gt;</button>
-                    </div> 
                 </div>
+                <div class="pets-slider__pagination">
+                    <button type="button" id="first" class="slider__pagination__item first" disabled>	&lt;&lt;</button>
+                    <button type="button" id="prev" class="slider__pagination__item prev" disabled>	&lt;</button>
+                    <button type="button" id="number" class="slider__pagination__item number">1</button>
+                    <button type="button" id="next" class="slider__pagination__item next" >&gt;</button>
+                    <button type="button" id="last" class="slider__pagination__item last" >&gt;&gt;</button>
+                </div> 
             </div>
         </section>
     </main>
@@ -107,5 +68,9 @@
         <img class="footer__image" src="../../assets/images/footer-puppy.png" alt="footer-puppy">
     </div>
     </footer>
+   
+    <div id="blackout-popup" class="hidden-popup">
+        <div class="closed">✖</div>
+    </div>
 </body>
 </html>
