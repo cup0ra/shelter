@@ -667,7 +667,7 @@ html {
     }
     .wrapper_about{
         margin-top: 63px;
-        /* flex-direction: column-reverse; */
+     flex-direction: column-reverse; 
     }
     .about__image{
         margin-top: 45px;
@@ -880,8 +880,16 @@ html {
         margin-left:40px;
     }
     .wrapper_about{
+  
+        @include flex();
         margin-top: 42px;
         margin:42px 3% -5px;
+    }
+    .about__content{
+        width: 100%;
+    }
+    .about__image{
+        width: 100%;
     }
     .about__content__header{
         text-align: center;
