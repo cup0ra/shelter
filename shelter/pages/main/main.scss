@@ -456,6 +456,7 @@ html {
     &:hover{
         color: black;
         cursor: pointer;
+        background: $color-button-hover;
         transition: 0.5s;
     }
 }
@@ -666,6 +667,7 @@ html {
     }
     .wrapper_about{
         margin-top: 63px;
+        /* flex-direction: column-reverse; */
     }
     .about__image{
         margin-top: 45px;
@@ -689,6 +691,16 @@ html {
     .help__item{
         width: 170px;
         margin: 24px 30px 11px;
+    }
+    .donation{
+        width: 100%;
+        background: #F6F6F6;
+        padding-bottom: 89px;
+        &_wrapper{
+            @include flex(wrap-reverse);
+            flex-direction: column-reverse;
+            margin: 0 auto;
+        }
     }
     .donation__image{
         margin-top: 48px; 
@@ -807,7 +819,7 @@ html {
         transition: 0.5s;
         &__list{
             flex-direction: column;
-            margin-top: 40px;
+            margin-top: 85px;
         }
         &__item{
             margin-bottom: 40px;
@@ -1060,7 +1072,7 @@ html {
             height: auto;
         }
         .closed{
-            margin-top: -395px;
+
             margin-left: 252px;
         }
         .popup__image{
@@ -1080,6 +1092,7 @@ html {
                 @include fonts($font-georgia, normal, 1.25rem, 120%, 0.06em );
                 margin-top: 0;
                 margin-bottom: 10px;
+                text-align: center;
             }
             &__description{
                 width: 220px;

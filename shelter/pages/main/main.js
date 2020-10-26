@@ -187,16 +187,19 @@ window.addEventListener("resize", (e) => {
 });
 document.querySelectorAll('.pets-slider__item').forEach((click) => {
     click.addEventListener('click', function (e) {
-        var _a;
-        console.log(e.target.closest('.pets-slider__item').id);
+        var _a, _b;
+        html === null || html === void 0 ? void 0 : html.classList.toggle('scroll');
         (_a = document.querySelector('#blackout-popup')) === null || _a === void 0 ? void 0 : _a.classList.toggle('hidden-popup');
         showPopup(e.target.closest('.pets-slider__item').id, dataPets);
+        const q = parseFloat(getComputedStyle(document.querySelector('.popup')).height);
+        (_b = document.getElementById('closed')) === null || _b === void 0 ? void 0 : _b.style.marginTop = `${-(q + 50)}px`;
     });
 });
 (_c = document.querySelector('body')) === null || _c === void 0 ? void 0 : _c.addEventListener('click', (e) => {
     var _a, _b;
     if (e.target.className === 'popup__wrapper' || e.target.id === 'blackout-popup' || e.target.className === 'closed') {
         (_a = document.querySelector('#blackout-popup')) === null || _a === void 0 ? void 0 : _a.classList.toggle('hidden-popup');
+        html === null || html === void 0 ? void 0 : html.classList.toggle('scroll');
         return (_b = document.querySelector('body')) === null || _b === void 0 ? void 0 : _b.removeChild(document.querySelector('.popup__wrapper'));
     }
 });

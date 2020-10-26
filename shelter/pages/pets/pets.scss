@@ -27,7 +27,7 @@ $font-arial: Arial;
 .header{
     width: 100%;
     height: 120px;
-    position: fixed;
+    position: sticky;
     top: 0;
     background-color: #ffffff;
     color: #545454;
@@ -201,6 +201,7 @@ $font-arial: Arial;
     outline: none;
     background-color: inherit;
     text-align: center;
+    font-weight: bold;
    @include flex();
     cursor: pointer;
     color: black;
@@ -223,6 +224,7 @@ $font-arial: Arial;
 .number{
     color: black;
     background-color: #F1CDB3;
+    font-weight: normal;
 }
 
 
@@ -336,7 +338,7 @@ $font-arial: Arial;
         &__title{
             @include fonts($font-georgia, normal, 2.1rem, 120%, 0.08em );
             margin-top: 53px;
-            margin-bottom: 11px;;
+            margin-bottom: 11px;
         }
         &__subtitle{
             @include fonts($font-georgia, normal, 1.25rem, 120%, 0.06em );
@@ -522,6 +524,7 @@ $font-arial: Arial;
         transition: 0.5s;
         &__list{
             flex-direction: column;
+            margin-top: 85px;
         }
         &__item{
             margin-bottom: 40px;
@@ -646,7 +649,7 @@ $font-arial: Arial;
             height: auto;
         }
         .closed{
-            margin-top: calc(('.popup')) -395px;
+            margin-top:  -395px;
             margin-left: 252px;
         }
         .popup__image{
@@ -666,6 +669,7 @@ $font-arial: Arial;
                 @include fonts($font-georgia, normal, 1.25rem, 120%, 0.06em );
                 margin-top: 0;
                 margin-bottom: 10px;
+                text-align: center;
             }
             &__description{
                 width: 220px;

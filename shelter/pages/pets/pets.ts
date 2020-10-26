@@ -1,13 +1,15 @@
 import dataPets from '../../assets/data/pets.js';
 import showPopup from '../../assets/data/showPopup.js';
-const burgerMenu:Element | null = document.getElementById('burger-menu');
-const containerMenu:Element | null = document.querySelector('.header__menu');
-const logo:Element | null = document.querySelector('.wrapper');
-const header:Element | null = document.querySelector('.header');
-const blackout:Element | null = document.querySelector('#blackout-menu');
-const notOnlyButton:Element | null = document.querySelector('.not-only__content__button');
-const headerLogo:Element | null = document.querySelector('.header__logo');
-const html:Element | null = document.querySelector('html');
+const burgerMenu:HTMLElement | null = document.getElementById('burger-menu');
+const containerMenu:HTMLElement | null = document.querySelector('.header__menu');
+const logo:HTMLElement | null = document.querySelector('.wrapper');
+const header:HTMLElement | null = document.querySelector('.header');
+const blackout:HTMLElement | null = document.querySelector('#blackout-menu');
+const notOnlyButton:HTMLElement | null = document.querySelector('.not-only__content__button');
+const headerLogo:HTMLElement | null = document.querySelector('.header__logo');
+const html:HTMLElement | null = document.querySelector('html');
+const closed: HTMLElement | null = document.querySelector('.closed')
+const popup:HTMLElement | null = document.querySelector('.popup')
 
 const openClosedMenu = () => {
     containerMenu?.classList.toggle('active-menu');
@@ -204,7 +206,6 @@ class Slider{
     this.setActive()
     this.getActive()
     this.createItems()
-    console.log(this.dataPets)
   }
 
 }
@@ -218,15 +219,18 @@ document.querySelector('.pets-slider__pagination')?.addEventListener('click', (e
 
 document.querySelector('.pets-slider')?.addEventListener('click', (e: any) => {
   if(e.target.closest('.pets-slider__item')){
-    console.log(e.target.closest('.pets-slider__item').id)
+    html?.classList.toggle('scroll')
     document.querySelector('#blackout-popup')?.classList.toggle('hidden-popup');
     showPopup(e.target.closest('.pets-slider__item').id, dataPets);
+    const q = parseFloat(getComputedStyle(document.querySelector('.popup')).height) 
+    document.getElementById('closed').style.marginTop=`${-(q + 50)}px`
   }
 })
 
 document.querySelector('body')?.addEventListener('click', (e: any) => {
   if(e.target.className === 'popup__wrapper' || e.target.id === 'blackout-popup' || e.target.className === 'closed'){
     document.querySelector('#blackout-popup')?.classList.toggle('hidden-popup');
+    html?.classList.toggle('scroll')
     return document.querySelector('body')?.removeChild(document.querySelector('.popup__wrapper'));
   }
 })

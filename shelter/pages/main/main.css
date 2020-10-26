@@ -755,6 +755,7 @@ html {
 .donation__credit-card:hover {
   color: black;
   cursor: pointer;
+  background: #FDDCC4;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -1132,6 +1133,7 @@ html {
   }
   .wrapper_about {
     margin-top: 63px;
+    /* flex-direction: column-reverse; */
   }
   .about__image {
     margin-top: 45px;
@@ -1157,6 +1159,29 @@ html {
   .help__item {
     width: 170px;
     margin: 24px 30px 11px;
+  }
+  .donation {
+    width: 100%;
+    background: #F6F6F6;
+    padding-bottom: 89px;
+  }
+  .donation_wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    margin: 0 auto;
   }
   .donation__image {
     margin-top: 48px;
@@ -1328,7 +1353,7 @@ html {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-top: 40px;
+    margin-top: 85px;
   }
   .header__menu__item {
     margin-bottom: 40px;
@@ -1621,7 +1646,6 @@ html {
     height: auto;
   }
   .closed {
-    margin-top: -395px;
     margin-left: 252px;
   }
   .popup__image {
@@ -1664,6 +1688,7 @@ html {
     letter-spacing: 0.06em;
     margin-top: 0;
     margin-bottom: 10px;
+    text-align: center;
   }
   .popup__content__description {
     width: 220px;

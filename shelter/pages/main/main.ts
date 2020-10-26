@@ -7,6 +7,7 @@ const header:Element | null = document.querySelector('.header');
 const blackout:Element | null = document.querySelector('#blackout-menu');
 const notOnlyButton:Element | null = document.querySelector('.not-only__content__button');
 const petsButton:Element | null = document.querySelector('.pets__button');
+const html:Element | null = document.querySelector('html');
 
 console.log(dataPets)
 interface Pets {
@@ -36,6 +37,7 @@ const openClosedMenu = () => {
     logo?.classList.toggle('wrapper-menu');
     header?.classList.toggle('header-menu');
     blackout?.classList.toggle('hidden');
+    html?.classList.toggle('scroll')
 }
 
 burgerMenu?.addEventListener('click', () => openClosedMenu())
@@ -223,15 +225,18 @@ document.querySelector('.slider-previous')?.addEventListener('click', function()
 }); 
 document.querySelectorAll('.pets-slider__item').forEach((click) =>{
   click.addEventListener('click', function (e: any) {
-    console.log(e.target.closest('.pets-slider__item').id)
+    html?.classList.toggle('scroll')
     document.querySelector('#blackout-popup')?.classList.toggle('hidden-popup');
     showPopup(e.target.closest('.pets-slider__item').id, dataPets);
+    const q = parseFloat(getComputedStyle(document.querySelector('.popup')).height) 
+    document.getElementById('closed')?.style.marginTop=`${-(q + 50)}px`
   }); 
 }) 
 
 document.querySelector('body')?.addEventListener('click', (e: any) => {
 if(e.target.className === 'popup__wrapper' || e.target.id === 'blackout-popup' || e.target.className === 'closed'){
   document.querySelector('#blackout-popup')?.classList.toggle('hidden-popup');
+  html?.classList.toggle('scroll')
   return document.querySelector('body')?.removeChild(document.querySelector('.popup__wrapper'));
 }
 })
