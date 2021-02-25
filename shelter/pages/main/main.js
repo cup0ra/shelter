@@ -20,8 +20,8 @@ const openClosedMenu = () => {
 };
 burgerMenu === null || burgerMenu === void 0 ? void 0 : burgerMenu.addEventListener('click', () => openClosedMenu());
 blackout === null || blackout === void 0 ? void 0 : blackout.addEventListener('click', () => openClosedMenu());
-notOnlyButton === null || notOnlyButton === void 0 ? void 0 : notOnlyButton.addEventListener('click', () => document.location.href = '../pets/pets.html');
-petsButton === null || petsButton === void 0 ? void 0 : petsButton.addEventListener('click', () => document.location.href = '../pets/pets.html');
+notOnlyButton === null || notOnlyButton === void 0 ? void 0 : notOnlyButton.addEventListener('click', () => document.location.href = '../pets/index.html');
+petsButton === null || petsButton === void 0 ? void 0 : petsButton.addEventListener('click', () => document.location.href = '../pets/index.html');
 class Slider {
     constructor(dataPets) {
         var _a;

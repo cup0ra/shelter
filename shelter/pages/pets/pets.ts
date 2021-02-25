@@ -22,7 +22,7 @@ const openClosedMenu = () => {
 
 burgerMenu?.addEventListener('click', () => openClosedMenu())
 blackout?.addEventListener('click', () => openClosedMenu())
-headerLogo?.addEventListener('click', () => document.location.href = '../main/main.html')
+headerLogo?.addEventListener('click', () => document.location.href = '../main/index.html')
 
 
 interface Pets {

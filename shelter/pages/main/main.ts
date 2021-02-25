@@ -42,8 +42,8 @@ const openClosedMenu = () => {
 
 burgerMenu?.addEventListener('click', () => openClosedMenu())
 blackout?.addEventListener('click', () => openClosedMenu())
-notOnlyButton?.addEventListener('click', () => document.location.href = '../pets/pets.html')
-petsButton?.addEventListener('click', () => document.location.href = '../pets/pets.html')
+notOnlyButton?.addEventListener('click', () => document.location.href = '../pets/index.html')
+petsButton?.addEventListener('click', () => document.location.href = '../pets/index.html')
 
 
 class Slider{

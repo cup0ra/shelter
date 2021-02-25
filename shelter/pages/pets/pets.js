@@ -21,7 +21,7 @@ const openClosedMenu = () => {
 };
 burgerMenu === null || burgerMenu === void 0 ? void 0 : burgerMenu.addEventListener('click', () => openClosedMenu());
 blackout === null || blackout === void 0 ? void 0 : blackout.addEventListener('click', () => openClosedMenu());
-headerLogo === null || headerLogo === void 0 ? void 0 : headerLogo.addEventListener('click', () => document.location.href = '../main/main.html');
+headerLogo === null || headerLogo === void 0 ? void 0 : headerLogo.addEventListener('click', () => document.location.href = '../main/index.html');
 class Slider {
     constructor(dataPets) {
         var _a;
